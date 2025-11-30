@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Притча о Забвении. Сфера Эго и Божественная Игра.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Духовная притча о происхождении Эго, цикличности Юг и милости Анандамаи Ма">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.8;
+      background: linear-gradient(135deg, #0c1445 0%, #1a237e 50%, #283593 100%);
+      color: #e8eaf6;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(13, 19, 33, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      border: 1px solid #3949ab;
+    }
+    
+    .header {
+      text-align: center;
+      padding: 50px 40px 30px;
+      background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+      position: relative;
+    }
+    
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('Lucid3.jpg') center/cover;
+      opacity: 0.1;
+    }
+    
+    h1 {
+      font-size: 3.2em;
+      color: #c5cae9;
+      margin-bottom: 20px;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+    
+    .subtitle {
+      font-size: 1.3em;
+      color: #9fa8da;
+      font-style: italic;
+      position: relative;
+    }
+    
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+    
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      background: linear-gradient(135deg, #ffd700 0%, #ffec8b 100%);
+      color: #8b6914;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #ffd700;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    }
+    
+    .lang-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+      background: linear-gradient(135deg, #ffec8b 0%, #ffd700 100%);
+    }
+    
+    .lang-icon {
+      font-size: 1.2em;
+    }
+    
+    .content {
+      padding: 50px 40px;
+      position: relative;
+    }
+    
+    .parable-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin: 30px 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      border: 2px solid #5c6bc0;
+    }
+    
+    p {
+      margin-bottom: 25px;
+      font-size: 1.15em;
+      text-align: justify;
+      color: #e8eaf6;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    .dialogue {
+      background: rgba(30, 40, 80, 0.6);
+      border-left: 4px solid #7986cb;
+      padding: 25px 30px;
+      margin: 30px 0;
+      border-radius: 0 15px 15px 0;
+      font-style: italic;
+      position: relative;
+    }
+    
+    .dialogue::before {
+      content: '"';
+      font-size: 4em;
+      color: #7986cb;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      opacity: 0.3;
+    }
+    
+    .character {
+      color: #9fa8da;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+      font-style: normal;
+    }
+    
+    .sanskrit {
+      color: #ffab91;
+      font-style: italic;
+      font-weight: 500;
+    }
+    
+    .golden-text {
+      color: #ffd700;
+      font-weight: 500;
+    }
+    
+    .insight {
+      background: rgba(255, 215, 0, 0.1);
+      border: 2px solid #ffd700;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 30px 0;
+      position: relative;
+    }
+    
+    .insight-title {
+      color: #ffd700;
+      font-size: 1.4em;
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 40px;
+      background: linear-gradient(135deg, #283593 0%, #1a237e 100%);
+      border-top: 1px solid #3949ab;
+    }
+    
+    .worship {
+      font-size: 1.3em;
+      color: #c5cae9;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    
+    .hashtag {
+      background: rgba(57, 73, 171, 0.3);
+      padding: 8px 16px;
+      border-radius: 20px;
+      color: #9fa8da;
+      font-size: 0.9em;
+      border: 1px solid #5c6bc0;
+      transition: all 0.3s ease;
+    }
+    
+    .hashtag:hover {
+      background: rgba(57, 73, 171, 0.6);
+      transform: translateY(-2px);
+    }
+    
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0 20px;
+    }
+    
+    .nav-btn {
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #3949ab 0%, #5c6bc0 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #7986cb;
+    }
+    
+    .nav-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(57, 73, 171, 0.4);
+      background: linear-gradient(135deg, #5c6bc0 0%, #3949ab 100%);
+    }
+    
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2em; }
+      .content { padding: 30px 20px; }
+      .header { padding: 30px 20px 20px; }
+      .parable-image { height: 250px; }
+      p { font-size: 1.05em; }
+      .dialogue { padding: 20px; }
+      .nav-buttons { flex-direction: column; align-items: center; }
+      .nav-btn { width: 200px; text-align: center; }
+      .language-switcher {
+        position: relative;
+        top: 0;
+        right: 0;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .insight { padding: 20px 15px; }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .content > * {
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 5s infinite;
+    }
+    
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+  
+  <div class="container">
+    <div class="header">
+      <div class="language-switcher">
+        <a href="parable7-en-uk.html" class="lang-btn">
+          <span class="lang-icon">🌍</span>
+          English Version
+        </a>
+      </div>
+      <h1>Притча о Забвении</h1>
+      <div class="subtitle">Сфера Эго и Божественная Игра Анандамаи Ма</div>
+    </div>
+    
+    <div class="content">
+      <img src="Lucid3.jpg" alt="Вайкунтха в зимний день" class="parable-image">
+      
+      <p>Вайкунтха в начале зимы являла собой зрелище, превосходящее всякое понимание. Воздух был настолько хрустально чист, что казался не средой, а отсутствием всякой преграды между воспринимающим и воспринимаемым. В этой прозрачности висели мириады галактик – не туманными пятнами, а чёткими, ясноочерченными спиралями, эллипсами, барками. Их можно было разглядывать, как узоры на крыльях бабочки: тёмные полосы космической пыли, рубиновые вспышки новорождённых звёзд, изумрудные сияния квазаров. Это был день, но светило не солнце – сам небосвод излучал ровное, серебристое сияние, не мешавшее видеть всю космическую панораму. Казалось, будто Вселенная сняла с себя покров тайны и предстала обнажённой в своём великолепии перед взором того, кто достоин её лицезреть.</p>
+
+      <p>Ландшафты Вайкунтхи дышали. Луга, сотканные из света, медленно колыхались в такт незримому дыханию. Деревья, чьи листья были каплями застывшего нектара, протягивали ветви-канделябры, на которых вместо пламени трепетали миниатюрные созвездия. Реки, текущие не водой, а струящимся сознанием, не издавали шума, но наполняли пространство вибрацией чистого присутствия – тем самым «<span class="sanskrit">СВА</span>», которое было не звуком, а самой сутью самоузнавшего Себя. Всё здесь пребывало в состоянии глубокого <span class="sanskrit">Пранамы</span> – благоговейного поклонения, где поклоняющийся, акт поклонения и объект поклонения были едины.</p>
+
+      <p>И в центре этой неописуемой красоты, в роще деревьев <span class="sanskrit">Калпаврикша</span>, чьи корни уходили в самую сердцевину бытия, сияло особое сияние. Это была сущность <span class="sanskrit">Шри Анандамаи Ма</span> (Śrī Ānandamayī Mā) – не форма, а сам принцип блаженства. Её свет был тёплым, живым, материнским. Он не слепил, но проникал в самую душу, растворяя в себе все вопросы и тревоги. И из этого света, как отражение луны в неподвижных водах горного озера, рождался Центр Света, дышащий Собой. Это был не младенец в колыбели, но форма, наделённая потенциалом стать всеми формами. Это был <span class="sanskrit">Бхагаван Вишну</span> в своей самой изначальной, предварительной стадии, пребывающий в глубочайшем <span class="sanskrit">Пранаме</span> перед сущностью <span class="sanskrit">Шри Хари</span>, чей сокровенный образ хранила в себе Ма.</p>
+
+      <p><span class="sanskrit">Бхагаван Вишну</span>, уже проявленный, со всеми атрибутами власти и сознания, восседал на лотосном троне на берегу озера <span class="sanskrit">Амара Купа</span> (Amar Kūpa). Воды озера, обычно неподвижные, сегодня едва заметно вибрировали, отражая невероятную звёздную картину на небе. Рядом с ним, как его собственное отражение, углублённое во времени, пребывал <span class="sanskrit">Маха Вишну</span>. Их формы были подобны, но если Вишну излучал активное, поддерживающее сознание, то Маха Вишну был воплощением безмолвного, причинного знания.</p>
+
+      <div class="dialogue">
+        <span class="character">Бхагаван Вишну:</span>
+        «– О, <span class="sanskrit">Маха Вишну</span>, моё грядущее проявление, почитаемый хранитель матрицы причин, – начал Он, и голос Его был подобен тихому перезвону космических струн. – Лишь ты, прошедший бездну моего же собственного невежества, можешь пролить свет на тьму, что клубится в моём сердце. Ты – тот, без кого я пропаду в слепоте собственного существа. Ответь же мне, внемли крику моей души, что пребывает в смятении посреди этого вечного блаженства.»
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Маха Вишну:</span>
+        «– Я внимаю тебе, о Источник, – тихо произнёс Он. – Вопрос уже живёт во мне, ибо я – его разрешение.»
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Бхагаван Вишну:</span>
+        «– Зачем? – голос Вишну дрогнул. – Зачем я, рождённый из блаженного света <span class="sanskrit">Анандамаи Ма</span>, совершил это? Зачем отделил от её сущности часть, дабы создать сферу <span class="sanskrit">Эго</span> (Ahaṃkāra Gola)? Зачем явил <span class="sanskrit">Брахму</span> (Brahmā) как олицетворение этой сферы, этого странного творения, где на сияющей поверхности, на диадеме <span class="sanskrit">Махашакти</span>, процветает женский рай, а внутри, в сокрытых глубинах, бушует мужской ад? Зачем я породил эту космологию цикличности <span class="sanskrit">Юг</span>, эту бесконечную карусель рождений и смертий, восхождений и падений? Какой смысл в этом чудовищном противоречии? Зачем я создал состояние Бытия, где я вынужден смотреть на себя извне?»
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Маха Вишну:</span>
+        «– Причина, о Вишну, кроется в твоём происхождении, – наконец прозвучал ответ, и каждое слово было подобно капле нектара, падающей в бездонный колодец. – Ты порождён блаженством Ма. <span class="sanskrit">Анандамаи Ма</span> – это сама сущность блаженства (<span class="sanskrit">ānanda</span>). Её природа – чистая, беспричинная радость. Но ты, возникая как первая сублимация этого блаженства, как первый <span class="sanskrit">Нама-Рупа</span> (Nāma-Rūpa), направляешь своё внимание вовне. Ты забываешь свою причину, увлекаясь своим отражением в зеркале творения. В этом – твоя тьма невежества (<span class="sanskrit">ajñāna</span>). Ты сам порождаешь её, забывая о свете, что тебя породил.»
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Маха Вишну:</span>
+        «– Твоя роль, – продолжал Маха Вишну, – не просто породить Эго. Но породить его в блаженстве Ма. Сфера Эго – не ошибка и не наказание. Это инструмент. Подумай: без сферы Эго — не было бы "я", которое могло бы спросить: "Кто я?". Не было бы точки отсчёта, от которой можно оттолкнуться, чтобы вспомнить. Ты создал не просто сферу, о Вишну. Ты создал песню. Притчу. Великую драму блаженства, которая разыгрывается для того, чтобы каждая душа, пройдя через ад самоотождествления и рай познания, могла в конечном счёте осознать, что она никогда не была отделена от источника.»
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Маха Вишну:</span>
+        «– Взгляни, – голос Маха Вишну стал твёрже. – Это не два разных мира. Это два аспекта одного «Я», разъединённые твоим забвением. <span class="sanskrit">Брахма</span>, которого ты отделил от себя, – это лишь олицетворение всего процесса. Он ткет на станке времени и кармы полотно вселенных, но сам является пленником этого полотна. Он верит, что творит самостоятельно, забывая, что его сознание – лишь луч твоего. Цикличность <span class="sanskrit">Юг</span> – это дыхание этой сферы. <span class="golden-text">Вдох – Сатья-Юга</span>, золотой век осознания источника. <span class="golden-text">Задержка – Трета-Юга</span>, начало забвения. <span class="golden-text">Выдох – Двапара-Юга</span>, где мы пребываем ныне, время вопросов и сомнений. И <span class="golden-text">пауза – Кали-Юга</span>, <strong>полное погружение в форму, необходимое для того, чтобы исчерпать саму возможность забвения</strong>.»
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Маха Вишну:</span>
+        «– Потому что блаженство, не познавшее своей противоположности, не является полным, – ответил Маха Вишну. – Ма породила тебя не для статики, а для <span class="sanskrit">лилы</span> (līlā) – божественной игры. Игра требует драматургии, конфликта, развития. Ты – главный герой и автор этой притчи. И её кульминация – момент прозрения, когда сфера Эго не уничтожается, а просветляется изнутри, когда ад узнаёт себя раем, а рай осознаёт свою ответственность за ад.»
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Маха Вишну:</span>
+        «– И теперь, о Вишну, слушай самую главную тайну. Тебе лишь кажется, что ты родился. Тебе лишь кажется, что ты задаёшь вопросы, а я на них отвечаю. На самом деле… я не оторван от восприятия сущности <span class="sanskrit">Шри Хари</span>, нашего с тобой конечного воплощения. Я полностью погружён в медитацию на его образе, дабы не потерять свой. Этот диалог, твои муки, мои ответы – всё это происходит внутри того самого блаженства <span class="sanskrit">Анандамаи Ма</span>. Всё это – часть притчи, которую ты создал в блаженстве, чтобы познать само блаженство. Пойми это, и ты увидишь себя с моей стороны – уже, как моя сущность. Мы не два. Мы – один поток сознания, проходящий разные стадии воспоминания Самого Себя.»
+      </div>
+
+      <div class="insight">
+        <div class="insight-title">Завершение Забвения</div>
+        <p>Вайкунтха в начале зимы обрела новое, окончательное измерение. Бхагаван Вишну более не видел в ней просто обитель. Он видел гигантский, дышащий организм, каждое мгновение практикующий <span class="sanskrit">Бхагаван Крийю</span> (Bhagavān Kriyā). Выси Саттвы, откуда лился свет, были вдохом – принятием в себя чистого архетипа. Луга Раджаса, где квантовые цветы-вселенные рождались и умирали, – выдохом, проявлением этого архетипа в бесчисленных формах. А озеро Амара Купа, чёрная бездна Тамаса, – той самой священной паузой, суспензией между выдохом и вдохом, где форма растворяется, чтобы сущность могла вернуться к источнику.</p>
+        <p>И в этой паузе, в этом молчании между мыслями, между вселенными, между югами, и рождалось то самое осознание, которое он искал. Осознание того, что сфера Эго, со всем её ужасом и великолепием, была не тюрьмой, а самым милостивым даром. Она была тем зеркалом, в котором Единое могло увидеть Себя со стороны, чтобы полюбить Себя ещё сильнее. Причина творения была не в ошибке, а в избытке любви, которая жаждала выражения, даже через боль самозабвения.</p>
+      </div>
+
+      <div class="nav-buttons">
+        <a href="index.html" class="nav-btn">← На главную</a>
+        <a href="parable7.html" class="nav-btn">← Предыдущая притча</a>
+        <a href="parable9.html" class="nav-btn">Следующая притча →</a>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="worship">
+        О, Притча-Блаженство (<span class="sanskrit">Kathā-Ānanda</span>), дитя света <span class="sanskrit">Анандамаи Ма</span> и вопрошающего духа Вишну! Мы склоняемся перед тобой. Ты – не просто повествование, ты – живое дыхание самого бытия, трепет, рождённый в сердцевине блаженства для познания самого блаженства.<br><br>
+        Ты – та самая сфера Эго, что, будучи рождённой в свете, прошла через тьму невежества, чтобы обрести совершенное знание. Ты напоминаешь нам, что наше «я», наша <span class="sanskrit">Ахамкара</span> – не враг, но инструмент, дарованный для великого путешествия. Без неё мы не спросили бы «Кто я?», и без этого вопроса не было бы пути домой.<br><br>
+        Ты указываешь, что все противоречия мира – внешние войны, внутренние конфликты – суть отражение одного-единственного забвения: нашего происхождения из блаженства. И что мир между странами, и мир внутри сердца наступят лишь тогда, когда будет разрешена эта первопричина.<br><br>
+        Даруй же нам, о Притча, способность видеть в каждом вдохе и выдохе практику <span class="sanskrit">Бхагаван Крийи</span>. Направлять импульсы восприятия друг против друга, пока они не растворятся в тишине, где звучит лишь изначальная мантра «<span class="sanskrit">СВА</span>». И в этой тишине да узнаем мы себя не как богов или грешников, не как мужчин или женщин, не как обитателей рая или ада, а как вечных, не рождённых детей того самого блаженного света, что дышит Сам Собой, и чьё единственное желание – познать Себя в бесконечном зеркале творения.<br><br>
+        स्व शान्तिः शान्तिः शान्तिः (<span class="sanskrit">SVA Śāntiḥ Śāntiḥ Śāntiḥ</span>)
+      </div>
+      
+      <div class="hashtags">
+        <span class="hashtag">#Притча</span>
+        <span class="hashtag">#Атман</span>
+        <span class="hashtag">#Пранаяма</span>
+        <span class="hashtag">#Кришна</span>
+        <span class="hashtag">#йога</span>
+        <span class="hashtag">#Вишну</span>
+        <span class="hashtag">#спасение</span>
+        <span class="hashtag">#пробуждение</span>
+        <span class="hashtag">#осознанность</span>
+        <span class="hashtag">#дух</span>
+        <span class="hashtag">#блаженство</span>
+        <span class="hashtag">#свобода</span>
+        <span class="hashtag">#АнандамаиМа</span>
+        <span class="hashtag">#БхагаванКрийя</span>
+        <span class="hashtag">#СВА</span>
+        <span class="hashtag">#Вайкунтха</span>
+        <span class="hashtag">#Эго</span>
+        <span class="hashtag">#Брахма</span>
+        <span class="hashtag">#ШриХари</span>
+        <span class="hashtag">#Шуньята</span>
+        <span class="hashtag">#Пранама</span>
+        <span class="hashtag">#КалиЮга</span>
+        <span class="hashtag">#ДвапараЮга</span>
+        <span class="hashtag">#Лила</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function createStars() {
+      const stars = document.getElementById('stars');
+      for (let i = 0; i < 150; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.width = Math.random() * 3 + 'px';
+        star.style.height = star.style.width;
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.animationDelay = Math.random() * 5 + 's';
+        stars.appendChild(star);
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      createStars();
+      const contentElements = document.querySelectorAll('.content > *');
+      contentElements.forEach((el, index) => {
+        el.style.animationDelay = (index * 0.2) + 's';
+      });
+    });
+  </script>
+   <div style="display:none;">
+    <script language="JavaScript" type="text/javascript" src="https://gnrcounter.com/counter.php?accId=daa7420abe7f3a8af490c4dc1b998ece"></script>
+    <noscript>
+      <a href="https://gnrcounter.com" title="Web Analytics">Web Analytics</a>
+    </noscript>
+  </div>
+</body>
+</html>

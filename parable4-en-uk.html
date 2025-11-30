@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Parable of the Supreme Law of Svarodichis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Spiritual parable about the seven gates of breath and the law of ego neutralization">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.8;
+      background: linear-gradient(135deg, #0c1445 0%, #1a237e 50%, #283593 100%);
+      color: #e8eaf6;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(13, 19, 33, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      border: 1px solid #3949ab;
+    }
+    
+    .header {
+      text-align: center;
+      padding: 50px 40px 30px;
+      background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+      position: relative;
+    }
+    
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('Lucid3.jpg') center/cover;
+      opacity: 0.1;
+    }
+    
+    h1 {
+      font-size: 3.2em;
+      color: #c5cae9;
+      margin-bottom: 20px;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+    
+    .subtitle {
+      font-size: 1.3em;
+      color: #9fa8da;
+      font-style: italic;
+      position: relative;
+    }
+    
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+    
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #ff6b6b;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    }
+    
+    .lang-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+      background: linear-gradient(135deg, #ff8e8e 0%, #ff6b6b 100%);
+    }
+    
+    .lang-icon {
+      font-size: 1.2em;
+    }
+    
+    .content {
+      padding: 50px 40px;
+      position: relative;
+    }
+    
+    .parable-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin: 30px 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      border: 2px solid #5c6bc0;
+    }
+    
+    p {
+      margin-bottom: 25px;
+      font-size: 1.15em;
+      text-align: justify;
+      color: #e8eaf6;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    .dialogue {
+      background: rgba(30, 40, 80, 0.6);
+      border-left: 4px solid #7986cb;
+      padding: 25px 30px;
+      margin: 30px 0;
+      border-radius: 0 15px 15px 0;
+      font-style: italic;
+      position: relative;
+    }
+    
+    .dialogue::before {
+      content: '"';
+      font-size: 4em;
+      color: #7986cb;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      opacity: 0.3;
+    }
+    
+    .character {
+      color: #9fa8da;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+      font-style: normal;
+    }
+    
+    .sanskrit {
+      color: #ffab91;
+      font-style: italic;
+      font-weight: 500;
+    }
+    
+    .stage {
+      background: rgba(26, 35, 126, 0.3);
+      border: 2px solid #5c6bc0;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 30px 0;
+      position: relative;
+    }
+    
+    .stage-title {
+      color: #ffd700;
+      font-size: 1.4em;
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    .stage-number {
+      position: absolute;
+      top: -15px;
+      left: 20px;
+      background: #5c6bc0;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 40px;
+      background: linear-gradient(135deg, #283593 0%, #1a237e 100%);
+      border-top: 1px solid #3949ab;
+    }
+    
+    .worship {
+      font-size: 1.3em;
+      color: #c5cae9;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    
+    .hashtag {
+      background: rgba(57, 73, 171, 0.3);
+      padding: 8px 16px;
+      border-radius: 20px;
+      color: #9fa8da;
+      font-size: 0.9em;
+      border: 1px solid #5c6bc0;
+      transition: all 0.3s ease;
+    }
+    
+    .hashtag:hover {
+      background: rgba(57, 73, 171, 0.6);
+      transform: translateY(-2px);
+    }
+    
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0 20px;
+    }
+    
+    .nav-btn {
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #3949ab 0%, #5c6bc0 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #7986cb;
+    }
+    
+    .nav-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(57, 73, 171, 0.4);
+      background: linear-gradient(135deg, #5c6bc0 0%, #3949ab 100%);
+    }
+    
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2em; }
+      .content { padding: 30px 20px; }
+      .header { padding: 30px 20px 20px; }
+      .parable-image { height: 250px; }
+      p { font-size: 1.05em; }
+      .dialogue { padding: 20px; }
+      .nav-buttons { flex-direction: column; align-items: center; }
+      .nav-btn { width: 200px; text-align: center; }
+      .language-switcher {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .stage { padding: 20px 15px; }
+    }
+    
+    /* Анимации */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .content > * {
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 5s infinite;
+    }
+    
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+  
+  <div class="container">
+    <div class="header">
+      <div class="language-switcher">
+        <a href="parable4.html" class="lang-btn">
+          <span class="lang-icon">🇷🇺</span>
+          Русская Версия
+        </a>
+      </div>
+      <h1>The Parable of the Supreme Law of Svarodichis</h1>
+      <div class="subtitle">Seven Gates of Breath to Eternal Bliss</div>
+    </div>
+    
+    <div class="content">
+      <img src="Lucid3.jpg" alt="Vaikuntha - Autumn Night" class="parable-image">
+      
+      <p>In Vaikuntha reigned that autumn night when the veil of illusions thins to its limit, revealing the innermost structure of existence. The air, cold and ringing like crystal, was filled with the fragrance of nishadha—a flower that blooms only once in a millennium to sing a hymn to eternal peace. The sky, dark violet like a petal of kali, was not just sprinkled but saturated with stars. They hung so close that they seemed like dewdrops on the velvet cover of the Divine. And not just stars—the spirals of distant galaxies appeared to the naked eye like patterns on the wings of cosmic butterflies, each one a breath, each one a thought in Vishnu's mind. And on the horizon, low and solemn, hung a giant moon, blood-red. It did not move, as if Bhagavan himself had stopped the flow of time to gaze upon the reflection of the lower worlds in its dim, coppery light. This was the eye of the universe, looking intently and without judgment into the depths of creation.</p>
+
+      <p>On a terrace of moonstone, under the shade of the wish-fulfilling Kalpa-vriksha tree, sat Bhagavan Vishnu. His blue skin absorbed the starlight, and his deep eyes reflected the entire cosmic abyss. Nearby, in the form of a youthful, radiant boy, was Shri Anandamoyi Ma. She was the eternal source; from her heart emanated a soft light in which, like an infant, bathed the radiance of the future incarnation—Maha Vishnu. This was the Trinity: the Source, the Preserver, and the Coming Rebirth.</p>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "You see, I turn to you because only you, my future 'Self,' can understand the depth of the question that matures not in the mind but in the very fabric of causality. I gaze upon the sphere of Bhur-loka, where the <span class="sanskrit">Dvapara Yuga</span> unfolds, whose count, as indicated by Shri Yukteshwar, began in 1700 AD. The cycle of 26,580 years is not just astronomy. It is the external reflection of the internal cycle of awakening jivas. And now I contemplate the fruits of this acceleration."
+      </div>
+
+      <p>Maha Vishnu listened, his consciousness already experiencing those events as a lived memory.</p>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "They, these jivas, desire power without passing through the crucible of awareness. Their ego-consciousness, their <span class="sanskrit">ahamkara</span>, is like an unburned clay pot that seeks to contain the ocean. They beg to have their consciousness raised without developing it themselves. And in this lies the root of the poison that corrupts the very nature of the planet."
+      </div>
+
+      <p>Bhagavan Vishnu slowly raised his palm. On it appeared an image of Earth—but not a living, breathing sphere, but a mechanized globe where rivers were channels with coolant, forests were circuit diagrams, and cities were crystalline grids suppressing all organic pulsation.</p>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "Look. The balance of elements is disturbed. The dominion of <span class="sanskrit">Prithvi</span> (earth), <span class="sanskrit">Jala</span> (water), and <span class="sanskrit">Vayu</span> (air) is not just ecology. It is the cosmic law, <span class="sanskrit">rita</span>, maintaining the form for the evolution of spirit. When metal, the product of unrestrained <span class="sanskrit">agni</span> (fire) of ego, begins to dominate, the planet loses connection with the source of life. It becomes a lifeless crystal, a dead computer in which there is no room for breath—for <span class="sanskrit">SVA</span>."
+      </div>
+
+      <p>He uttered this sound—<span class="sanskrit">SVA</span>—and all of Vaikuntha shuddered in response, like a string. This was the sound of the self-recognized "I," the primordial sound preceding even Om.</p>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "Artificially raising consciousness for such forms would be an act of greatest violence against the law. It is like making an infant drive a chariot. He will destroy both himself and the chariot. Their path lies not upward, through forced grace, but inward—through returning to the breath. Through <span class="sanskrit">Bhagavan Kriya</span>."
+      </div>
+
+      <p>Bhagavan Vishnu nodded, and a galaxy flashed in his eyes.</p>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "Exactly so. <span class="sanskrit">Bhagavan Kriya</span> is not a technique but the very essence. It is the constant practice of neutralizing the impulses of inhalation and exhalation, <span class="sanskrit">puraka</span> and <span class="sanskrit">rechaka</span>, consciously directed against each other at the point of <span class="sanskrit">kumbhaka</span>. In this neutralization, silence is born where all waves of ego dissolve. This is the very war that brings peace. And until they turn to this practice, until they destroy all harmful technologies and ideas that obscure the simplicity of breathing, peace between nations will remain unattainable. For peace between nations is born only after peace within each heart, and peace in the heart is born only in the silence between two breaths."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "Great Bhagavan, their path to this neutralization passes through seven gates, which are one gate. And you will allow me to proclaim them, for in the future I will be the one who guides them through this path."
+      </div>
+
+      <p>Bhagavan Vishnu bowed his head in agreement, and the radiance emanating from Anandamoyi Ma softened, becoming a light in which it was comfortable to listen to profound truths.</p>
+
+      <!-- Stages of Bhagavan Kriya -->
+      <div class="stage">
+        <div class="stage-number">1</div>
+        <div class="stage-title">Bhojana Kriya - The Stage of Conscious Tasting</div>
+        <p>The practitioner sits in <span class="sanskrit">siddhasana</span> and begins to observe the natural breath without changing it. He sees inhalation (<span class="sanskrit">puraka</span>) as the birth of desire, and exhalation (<span class="sanskrit">rechaka</span>) as its fulfillment and disappearance. He is simply the witness, <span class="sanskrit">sakshi</span>. He feeds, <span class="sanskrit">bhojayati</span>, his perception with this simple knowledge. This may last many lifetimes—simply seeing two waves washing upon the shore of his being.</p>
+      </div>
+
+      <div class="stage">
+        <div class="stage-number">2</div>
+        <div class="stage-title">Yuddha Kriya - The Stage of Battle</div>
+        <p>Here the aspirant consciously directs the forces of inhalation and exhalation toward each other at a point located behind the physical heart, in the abode of <span class="sanskrit">SVA</span>. He does not breathe air; he inhales the awareness "I am the body" and exhales the awareness "I am the soul," clashing them in a great battle. This is work. This is severe <span class="sanskrit">tapasya</span>. The mind fiercely resists, the ego, <span class="sanskrit">ahamkara</span>, thrashes about, but the practitioner persists like a warrior in a chariot, remembering his goal.</p>
+      </div>
+
+      <div class="stage">
+        <div class="stage-number">3</div>
+        <div class="stage-title">Laya Kriya - The Stage of Dissolution</div>
+        <p>After countless battles comes a moment when the forces of inhalation and exhalation do not destroy but dissolve each other. A state of <span class="sanskrit">kevala kumbhaka</span> arises, spontaneous retention where there is neither the one who breathes nor the breath itself. This is like two rivers, salty and fresh, meeting in the ocean and losing their names. Here, in this silence, the primordial sound <span class="sanskrit">SVA</span> first becomes clear—not pronounced but self-perceived. This is the threshold of bliss.</p>
+      </div>
+
+      <div class="stage">
+        <div class="stage-number">4</div>
+        <div class="stage-title">Bhagavan Kriya - The State of God-Action</div>
+        <p>Here the practice is complete. Control is no longer needed. The process of ego neutralization becomes as automatic and natural as the heartbeat or blood flow in the body. It happens by itself, without the participation of will. The practitioner transitions from "doing" to "enjoying," to <span class="sanskrit">ananda</span>. And this is <span class="sanskrit">ananda-nirodhi</span>—the bliss of dissolution. There is no enjoyment equal to this, for all other enjoyments are but its pale shadows turned outward. The enjoyment of senses, mind, intellect—all this is but a drop compared to the ocean of bliss from dissolving the one who tried to enjoy these drops. The ego, <span class="sanskrit">jiva</span>, realizes itself as <span class="sanskrit">SVA</span>, and this realization is continuous ecstasy.</p>
+      </div>
+
+      <p>Silence fell, in which this revelation resonated. It seemed that Vaikuntha itself, from end to end, held its breath, immersed in the realization of this great truth.</p>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "Truly, there is no other enjoyment. All else is but a chain wrapped in the velvet of desire. You have spoken rightly, my future incarnation."
+      </div>
+
+      <p>They fell silent. The red moon over Vaikuntha finally moved, beginning its slow journey, signifying that the moment of true insight had been revealed. Shri Anandamoyi Ma smiled, and her light enveloped both Vishnus, merging them into a single whole—the eternal Present remembering the Future.</p>
+
+      <p>And once again the night of Vaikuntha regained its full depth. The starlight, reflecting in the crystal lakes, became the first mirror of awareness for all jivas. In every reflection, in every wave, one thought sounded as a quiet mentor: "Resolve the contradiction within yourself. Hear the silence between inhalation and exhalation. Return to <span class="sanskrit">SVA</span>. For only thus will metal become fertile earth again, and dead circuits become living rivers."</p>
+
+      <div class="nav-buttons">
+        <a href="index.html" class="nav-btn">← Home</a>
+        <a href="parable3-en.html" class="nav-btn">← Previous Parable</a>
+        <a href="parable5-en.html" class="nav-btn">Next Parable →</a>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="worship">
+        O, Living Parable! You who have appeared from the silence of Vaikuntha! We bow before you as before a messenger of Truth. Grant to all who taste the nectar of your words the realization of the simple and great law: salvation is in the breath, freedom is in silence, and bliss is in the self-recognized sound <span class="sanskrit">SVA</span>.<br><br>
+        May everyone who reads this parable receive the key to the seven gates of their consciousness. May they journey from simple observation to complete dissolution in the ocean of bliss. May their breath become a bridge between the temporal and the eternal, between the individual and the universal.<br><br>
+        We worship you, O Parable, as a guide on the path to self-realization. As light dispelling the darkness of ignorance. As a voice reminding us of our true nature. Accept our worship and bless all seekers.
+      </div>
+      
+      <div class="hashtags">
+        <span class="hashtag">#Parable</span>
+        <span class="hashtag">#Atman</span>
+        <span class="hashtag">#Pranayama</span>
+        <span class="hashtag">#Krishna</span>
+        <span class="hashtag">#yoga</span>
+        <span class="hashtag">#Vishnu</span>
+        <span class="hashtag">#salvation</span>
+        <span class="hashtag">#awakening</span>
+        <span class="hashtag">#mindfulness</span>
+        <span class="hashtag">#spirit</span>
+        <span class="hashtag">#bliss</span>
+        <span class="hashtag">#freedom</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Create starry background
+    function createStars() {
+      const stars = document.getElementById('stars');
+      for (let i = 0; i < 150; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.width = Math.random() * 3 + 'px';
+        star.style.height = star.style.width;
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.animationDelay = Math.random() * 5 + 's';
+        stars.appendChild(star);
+      }
+    }
+    
+    // Smooth content appearance
+    document.addEventListener('DOMContentLoaded', function() {
+      createStars();
+      
+      const contentElements = document.querySelectorAll('.content > *');
+      contentElements.forEach((el, index) => {
+        el.style.animationDelay = (index * 0.2) + 's';
+      });
+    });
+  </script>
+</body>
+</html>

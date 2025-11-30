@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Притча о Сандалиях Дхармы</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Духовная притча о правлении через Дхарму и осознанности дыхания">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.8;
+      background: linear-gradient(135deg, #1a0b2e 0%, #2d1b4e 50%, #3c2a5f 100%);
+      color: #e8e6f3;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(26, 11, 46, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      border: 1px solid #5d4b8d;
+    }
+    
+    .header {
+      text-align: center;
+      padding: 50px 40px 30px;
+      background: linear-gradient(135deg, #2d1b4e 0%, #3c2a5f 100%);
+      position: relative;
+    }
+    
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%232d1b4e"/><path d="M50 20 L60 40 L80 45 L65 60 L70 80 L50 70 L30 80 L35 60 L20 45 L40 40 Z" fill="%23ffffff" opacity="0.08"/></svg>');
+      opacity: 0.1;
+    }
+    
+    h1 {
+      font-size: 2.6em;
+      color: #d4c2fc;
+      margin-bottom: 10px;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    
+    .subtitle {
+      font-size: 1.2em;
+      color: #b8abeb;
+      font-style: italic;
+      position: relative;
+    }
+    
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+    
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #ff6b6b;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    }
+    
+    .lang-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+      background: linear-gradient(135deg, #ff8e8e 0%, #ff6b6b 100%);
+    }
+    
+    .lang-icon {
+      font-size: 1.2em;
+    }
+    
+    .content {
+      padding: 50px 40px;
+      position: relative;
+    }
+    
+    .parable-image {
+      width: 100%;
+      height: 400px;
+      border-radius: 15px;
+      margin: 30px 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      border: 2px solid #7e6caf;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .parable-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    p {
+      margin-bottom: 25px;
+      font-size: 1.15em;
+      text-align: justify;
+      color: #e8e6f3;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    .dialogue {
+      background: rgba(45, 27, 78, 0.6);
+      border-left: 4px solid #8b7cb3;
+      padding: 25px 30px;
+      margin: 30px 0;
+      border-radius: 0 15px 15px 0;
+      font-style: italic;
+      position: relative;
+    }
+    
+    .dialogue::before {
+      content: '"';
+      font-size: 4em;
+      color: #8b7cb3;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      opacity: 0.3;
+    }
+    
+    .character {
+      color: #c5b3e6;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+      font-style: normal;
+    }
+    
+    .sanskrit {
+      color: #ffd93d;
+      font-style: italic;
+      font-weight: 500;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 40px;
+      background: linear-gradient(135deg, #3c2a5f 0%, #2d1b4e 100%);
+      border-top: 1px solid #5d4b8d;
+    }
+    
+    .worship {
+      font-size: 1.3em;
+      color: #d4c2fc;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    
+    .hashtag {
+      background: rgba(93, 75, 141, 0.3);
+      padding: 8px 16px;
+      border-radius: 20px;
+      color: #b8abeb;
+      font-size: 0.9em;
+      border: 1px solid #7e6caf;
+      transition: all 0.3s ease;
+    }
+    
+    .hashtag:hover {
+      background: rgba(93, 75, 141, 0.6);
+      transform: translateY(-2px);
+    }
+    
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0 20px;
+    }
+    
+    .nav-btn {
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #5d4b8d 0%, #7e6caf 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #8b7cb3;
+    }
+    
+    .nav-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(93, 75, 141, 0.4);
+      background: linear-gradient(135deg, #7e6caf 0%, #5d4b8d 100%);
+    }
+    
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2em; }
+      .content { padding: 30px 20px; }
+      .header { padding: 30px 20px 20px; }
+      .parable-image { height: 250px; }
+      p { font-size: 1.05em; }
+      .dialogue { padding: 20px; }
+      .nav-buttons { flex-direction: column; align-items: center; }
+      .nav-btn { width: 200px; text-align: center; }
+      .language-switcher {
+        position: relative;
+        top: 0;
+        right: 0;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .content > * {
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 5s infinite;
+    }
+    
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
+    .moon-glow {
+      position: fixed;
+      top: 10%;
+      right: 10%;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(255, 0, 0, 0.3) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(20px);
+      z-index: -1;
+      animation: pulse 8s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+  <div class="moon-glow"></div>
+  
+  <div class="container">
+    <div class="header">
+      <div class="language-switcher">
+        <a href="parable3-en.html" class="lang-btn">
+          <span class="lang-icon">🌍</span>
+          English Version
+        </a>
+      </div>
+      <h1>Притча о Сандалиях Дхармы</h1>
+      <div class="subtitle">О правлении через Закон и осознанности дыхания</div>
+    </div>
+    
+    <div class="content">
+      <div class="parable-image">
+        <img src="https://breathingmusic.ct.ws/parab3.jpg" alt="Сандалии Дхармы на троне">
+      </div>
+      
+      <p>На <span class="sanskrit">Вайкунтхе</span> (Vaikuṇṭha) та ночь осени была такой, что само Время застывало, внимая тишине. Небо, обычно ласковое и молочно-золотое, стало глубоким и пронзительно-прозрачным, обнажив тайны мироздания. Звезды не мерцали — они горели ровным, ясным светом, но даже их сияние тонуло в великих звёздных реках, что были на самом деле спиралями далеких галактик. Они висели в невооруженном взоре, бархатные полотна, усыпанные алмазной пылью миллиардов солнц, переливающиеся сиреневыми, серебряными и тёмно-изумрудными тонами. А над самым горизонтом, в зените этой космической симфонии, повисла огромная луна. Она была не просто большой; она была всеобъемлющей, кроваво-красной, как расплавленный рубин в кузнице Брахмы. Казалось, это око самого мироздания, застывшее на несколько часов, чтобы взирать на вечность без моргания. Её свет, густой и тягучий, как мёд, заливал леса из деревьев желаний, озёра нектара и города из сияющего <span class="sanskrit">брахмаджняны</span>, отбрасывая длинные, четкие тени от всего сущего.</p>
+
+      <p>Именно в этом свете, на берегу озера Бессмертия, чьи воды отражали всю эту небесную феерию, сидел <span class="sanskrit">Бхагаван Вишну</span> (Bhagavān Viṣṇu). Его синяя кожа казалась в этом свете глубокой фиолетовой, а в руках Он перебирал бусины Своей <span class="sanskrit">джапа-малы</span>, каждая из которых была рождённой и растворённой вселенной. Рядом с Ним, излучая тихое сияние, подобное утренней заре, находилась <span class="sanskrit">Шри Анандамои Ма</span> — Источник всей Радости. Она была подобна луне, но той, что светит изнутри, мягко и матерински отражая в Себе всё сущее, давая ему жизнь самой Своей сутью.</p>
+
+      <p>И был с Ними ещё Один — Тот, чья форма была одновременно и отличной от Вишну, и единой с Ним. Это был <span class="sanskrit">Маха Вишну</span> (Mahā Viṣṇu), Его будущее воплощение, зародыш следующего великого цикла, уже существующий в вечном Сейчас. Его образ был подобен тени от могучего дерева, ещё не проявленной, но уже несущей в себе все его будущие листья и плоды.</p>
+
+      <div class="dialogue">
+        <span class="character">Бхагаван Вишну:</span>
+        «О <span class="sanskrit">Маха Вишну</span>, Моё грядущее «Я», в Чьей памяти уже записаны все грядущие мои воплощения, — произнёс Он с почтением, в котором была вся полнота понимания их единства. — Лишь Ты, зная изначальную причину Моих вопросов из самой их конечной цели, можешь пролить свет на загадку, что явилась Мне. Почему правление через символ — <span class="sanskrit">падуку</span> Рамы — было могущественнее правления любого царя из плоти и крови, включая даже самых добродетельных?»
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Маха Вишну:</span>
+        «Внемли, <span class="sanskrit">Бхагаван</span>. Царь, каким бы праведным он ни был, заключён в клетку своего эго — <span class="sanskrit">аханкары</span>. Его ум — <span class="sanskrit">манас</span> — колеблется между памятью прошлых ошибок и страхом будущих. Его решения, даже самые благие, фильтруются через призму его личного опыта, его гнева — <span class="sanskrit">кродхи</span>, и его желаний — <span class="sanskrit">камы</span>. Взгляни на Дашаратху: его любовь к жене затмила его <span class="sanskrit">дхарму</span> царя, и это привело к изгнанию самой справедливости - <span class="sanskrit">Дхармы</span> в облике Рамы. Власть личности всегда подвержена порче, ибо личность преходяща.»
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Бхагаван Вишну:</span>
+        «Но разве <span class="sanskrit">падука</span>, сандалии Рамы, - не есть также предмет? — спросил Вишну. — Разве она не материальна?»
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Маха Вишну:</span>
+        «<span class="sanskrit">Падука</span> — это не предмет, — отвечал Маха Вишну. — Это якорь. Это материальное воплощение безличного Принципа — <span class="sanskrit">Санатана Дхармы</span>. Когда Бхарат поставил сандалии Рамы на трон, он не поставил туфли. Он возвёл на престол саму Суть Порядка. Он стал проводником — не своей воли, но Воли, что превыше его. Он упразднил своё «я» в служении. И потому царством правила не его ограниченная мудрость, но безграничная мудрость самого Закона. Это и есть суть <span class="sanskrit">Бхагаван Крийи</span> — практики, что ты даруешь мирам.»
+      </div>
+
+      <p>Бхагаван Вишну кивнул, и в Его взоре вспыхнуло понимание, словно новая звезда.</p>
+
+      <div class="dialogue">
+        <span class="character">Бхагаван Вишну:</span>
+        «<span class="sanskrit">Бхагаван Крийя</span>… практика, где адепт сознательно сталкивает импульс вдоха — <span class="sanskrit">прану</span>, и импульс выдоха — <span class="sanskrit">апану</span>, нейтрализуя их в точке затишья — <span class="sanskrit">кумбхаке</span>. Таким образом, он нейтрализует саму двойственность, питающую эго. Вдох — это «я беру», выдох — «я отпускаю». Нейтрализуя их, он растворяет само Эго собственного «я».»
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Маха Вишну:</span>
+        «Именно так, — подтвердил Маха Вишну. — Бхарат, правя от имени <span class="sanskrit">падуки</span>, совершал непрерывную <span class="sanskrit">Бхагаван Крийю</span> на уровне управления. Он «вдыхал» нужды царства, но не присваивал их себе. Он «выдыхал» решения, но не приписывал их своей славе. Вся <span class="sanskrit">карма</span> правления растворялась в безличной <span class="sanskrit">Дхарме</span>, которую символизировали сандалии. Его правление было долгим, счастливым и миротворческим именно потому, что им правил не человек, а Сам Закон. Это и есть прозрачность восприятия — когда ум правителя становится кристально чистым сосудом для <span class="sanskrit">Дхармы</span>, а не мутным источником собственных хотений.»
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Шри Анандамои Ма:</span>
+        «Дитя Моё, настоящее воплощение Моей любви, — обратилась Она к Вишну, — но ведь люди забыли это. Они создали технологии и идеи, которые лишь усиливают шум их эго. Они ищут спасения вовне, в машинах и учениях, что лишь усыпляют их, затмевая единственную практику, ведущую к свободе — практику осознанного дыхания, <span class="sanskrit">Бхагаван Крийю</span>. Пока они не разрешат первопричины противоречий внутри своих собственных сердец, внутри своих стран, до тех пор войны и раздоры не утихнут. Ибо мир между странами невозможен, пока нет мира внутри душ, их населяющих. И этот мир рождается только в тишине между вдохом и выдохом.»
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Бхагаван Вишну:</span>
+        «Воистину так, — произнёс Бхагаван Вишну. — И потому в наступающую эпоху, в <span class="sanskrit">Двапару Югу</span>, что длится с 1700 года от Рождества Христова, как указал Мудрец Шри Юктешвар, Я вложу это знание в сердца искателей. Цикл <span class="sanskrit">Юг</span>, вписанный Мной в великий год прецессии земной оси, для того и длится эти 25 680 лет, чтобы души, суммируя ускорение планетарных и галактических вибраций, постепенно осознали общее строение сферы проявленного и вернулись к Истоку. И ключом будет не пение «ОМ», как в прошлом, но изначальная мантра «<span class="sanskrit">СВА</span>» — напоминание о самоузнанном «Я», <span class="sanskrit">Атмане</span>, который всегда был, есть и будет.»
+      </div>
+
+      <p>Триединое Молчание воцарилось на берегу. Глядя на них — Бхагавана Вишну, Маха Вишну и Шри Анандамои Ма, давшую жизнь младенцу Вишну для нового витка бытия из сияния собственного блаженства, — можно было увидеть саму суть мироздания: Наблюдателя, процесс Наблюдения и поле Наблюдаемого, слитые в одном вечном акте творения и растворения.</p>
+
+      <p>А тем временем ночь на Вайкунтхе достигала своего апогея. Огромная красная луна начала своё незаметное гладу движение, но её свет, по-прежнему, заливал всё вокруг. И в этом свете каждый предмет, каждое существо стало первым зеркалом осознанности. Деревья больше не просто были деревьями — они были тишиной, принявшей форму. Озёра были не просто водой — они были безмолвным сознанием, отражающим небеса. И сам воздух дрожал от понимания всех противоречий, которые когда-либо существовали, и их полного, абсолютного разрешения здесь и сейчас. Всё было на своём месте, всё было частью единой, совершенной <span class="sanskrit">Дхармы</span>, дышащей в ритме великой <span class="sanskrit">Бхагаван Крийи</span> мироздания. Не было ни страданий, ни вопросов, ни искателя, ни цели — была только бесконечная, самосветящаяся полнота, где даже мысль о разделении была невозможна. Это было царство, где на троне каждого сердца восседали не пожелания и страхи, а золотые сандалии вечного, самоузнанного «Я».</p>
+
+      <div class="nav-buttons">
+        <a href="index.html" class="nav-btn">← На главную</a>
+        <a href="parable4.html" class="nav-btn">Следующая притча →</a>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="worship">
+        О, Живая Притча, дитя ясного света Вайкунтхи! Мы склоняемся перед тобой. Ты — не просто слова на странице. Ты — сосуд, несущий нектар осознанности всем, кто прикоснётся к тебе сердцем. Как <span class="sanskrit">падука</span> Рамы была символом <span class="sanskrit">Дхармы</span> на троне Айодхьи, так и ты стань символом Истины на троне ума вдумчивого читателя. Дай нам вкусить ту же ясность, то же безмолвие между вдохом и выдохом, и напомни, что наше истинное «Я» всегда было, есть и будет свободным, блаженным духом, узнавшим Самого Себя в звучании «<span class="sanskrit">СВА</span>».
+      </div>
+      
+      <div class="hashtags">
+        <span class="hashtag">#Притча</span>
+        <span class="hashtag">#Атман</span>
+        <span class="hashtag">#Пранаяма</span>
+        <span class="hashtag">#Кришна</span>
+        <span class="hashtag">#йога</span>
+        <span class="hashtag">#Вишну</span>
+        <span class="hashtag">#спасение</span>
+        <span class="hashtag">#пробуждение</span>
+        <span class="hashtag">#осознанность</span>
+        <span class="hashtag">#дух</span>
+        <span class="hashtag">#блаженство</span>
+        <span class="hashtag">#свобода</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function createStars() {
+      const stars = document.getElementById('stars');
+      for (let i = 0; i < 150; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.width = Math.random() * 3 + 'px';
+        star.style.height = star.style.width;
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.animationDelay = Math.random() * 5 + 's';
+        stars.appendChild(star);
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      createStars();
+      
+      const contentElements = document.querySelectorAll('.content > *');
+      contentElements.forEach((el, index) => {
+        el.style.animationDelay = (index * 0.2) + 's';
+      });
+    });
+  </script>
+</body>
+</html>

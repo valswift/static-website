@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Parable of the Last Day</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Spiritual parable about the cyclical nature of existence and the eternal breath of the Universe">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.8;
+      background: linear-gradient(135deg, #0c1445 0%, #1a237e 50%, #283593 100%);
+      color: #e8eaf6;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(13, 19, 33, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      border: 1px solid #3949ab;
+    }
+    
+    .header {
+      text-align: center;
+      padding: 50px 40px 30px;
+      background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+      position: relative;
+    }
+    
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('Lucid3.jpg') center/cover;
+      opacity: 0.1;
+    }
+    
+    h1 {
+      font-size: 3.2em;
+      color: #c5cae9;
+      margin-bottom: 20px;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+    
+    .subtitle {
+      font-size: 1.3em;
+      color: #9fa8da;
+      font-style: italic;
+      position: relative;
+    }
+    
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+    
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      background: linear-gradient(135deg, #ffd700 0%, #ffec8b 100%);
+      color: #8b6914;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #ffd700;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    }
+    
+    .lang-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+      background: linear-gradient(135deg, #ffec8b 0%, #ffd700 100%);
+    }
+    
+    .lang-icon {
+      font-size: 1.2em;
+    }
+    
+    .content {
+      padding: 50px 40px;
+      position: relative;
+    }
+    
+    .parable-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin: 30px 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      border: 2px solid #5c6bc0;
+    }
+    
+    p {
+      margin-bottom: 25px;
+      font-size: 1.15em;
+      text-align: justify;
+      color: #e8eaf6;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    .dialogue {
+      background: rgba(30, 40, 80, 0.6);
+      border-left: 4px solid #7986cb;
+      padding: 25px 30px;
+      margin: 30px 0;
+      border-radius: 0 15px 15px 0;
+      font-style: italic;
+      position: relative;
+    }
+    
+    .dialogue::before {
+      content: '"';
+      font-size: 4em;
+      color: #7986cb;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      opacity: 0.3;
+    }
+    
+    .character {
+      color: #9fa8da;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+      font-style: normal;
+    }
+    
+    .sanskrit {
+      color: #ffab91;
+      font-style: italic;
+      font-weight: 500;
+    }
+    
+    .golden-text {
+      color: #ffd700;
+      font-weight: 500;
+    }
+    
+    .insight {
+      background: rgba(255, 215, 0, 0.1);
+      border: 2px solid #ffd700;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 30px 0;
+      position: relative;
+    }
+    
+    .insight-title {
+      color: #ffd700;
+      font-size: 1.4em;
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 40px;
+      background: linear-gradient(135deg, #283593 0%, #1a237e 100%);
+      border-top: 1px solid #3949ab;
+    }
+    
+    .worship {
+      font-size: 1.3em;
+      color: #c5cae9;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    
+    .hashtag {
+      background: rgba(57, 73, 171, 0.3);
+      padding: 8px 16px;
+      border-radius: 20px;
+      color: #9fa8da;
+      font-size: 0.9em;
+      border: 1px solid #5c6bc0;
+      transition: all 0.3s ease;
+    }
+    
+    .hashtag:hover {
+      background: rgba(57, 73, 171, 0.6);
+      transform: translateY(-2px);
+    }
+    
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0 20px;
+    }
+    
+    .nav-btn {
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #3949ab 0%, #5c6bc0 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #7986cb;
+    }
+    
+    .nav-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(57, 73, 171, 0.4);
+      background: linear-gradient(135deg, #5c6bc0 0%, #3949ab 100%);
+    }
+    
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2em; }
+      .content { padding: 30px 20px; }
+      .header { padding: 30px 20px 20px; }
+      .parable-image { height: 250px; }
+      p { font-size: 1.05em; }
+      .dialogue { padding: 20px; }
+      .nav-buttons { flex-direction: column; align-items: center; }
+      .nav-btn { width: 200px; text-align: center; }
+      .language-switcher {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .insight { padding: 20px 15px; }
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .content > * {
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 5s infinite;
+    }
+    
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+  
+  <div class="container">
+    <div class="header">
+      <div class="language-switcher">
+        <a href="parable5.html" class="lang-btn">
+          <span class="lang-icon">🌍</span>
+          Русская Версия
+        </a>
+      </div>
+      <h1>The Parable of the Last Day</h1>
+      <div class="subtitle">Revelation about the cyclical nature of existence and the eternal breath of the Universe</div>
+    </div>
+    
+    <div class="content">
+      <img src="Lucid3.jpg" alt="Vaikuntha in deep autumn night" class="parable-image">
+      
+      <p>There, where rivers of honey and light flow through meadows of blooming sapphires, lies <span class="sanskrit">Vaikuntha</span>. That deep autumn had come when the very fabric of reality becomes thin, turning into a transparent veil separating dream from awakening. At this time, night is not the absence of light, but its highest, concentrated manifestation. The celestial vault, usually azure and soft, was now black like infinitely polished obsidian, but not empty and frightening, but saturated to the limit with the radiance of countless worlds.</p>
+
+      <p>The stars did not twinkle as timid points; they burned with an even, confident light, each one a sun of a distant system. But the most astonishing thing was that between them, with the naked eye, one could see whirlpools and spirals of nebulae, entire galaxies scattered across space like splashes from the creative forge of <span class="sanskrit">Brahman</span>. They hung in silent, majestic silence, a round dance of myriads of suns whose light reached here, to the eternal abode, to witness the end of one great story.</p>
+
+      <p>And above all this soared she - the huge, incomprehensible diamond moon. She hung above the very horizon, frozen for long hours at the moment of her highest ascent. This was not merely a sphere of reflected light; it was a colossal crystal whose internal structure emitted a cold, pure, soul-piercing light. Its rays, refracting in the facets, scattered across Vaikuntha in billions of rainbow beams, coloring the sapphire fields with emerald and violet hues, turning the milky rivers into flowing silver. In this light, shadows were sharp and deep, and the outlines of everything existing were clear to the point of painfulness, as if truth itself was exposing its skeleton.</p>
+
+      <p>Under the canopy of the <span class="sanskrit">Kalpa-Vriksha</span>, the Tree of Time, whose branches stretched into the past and roots went into the future, on a lotus throne of pure consciousness sat <span class="sanskrit">Bhagavan Vishnu</span>. His body the color of a thundercloud was tranquil, and in His half-closed eyes danced reflected galaxies. Beside Him, abiding in her rainbow radiance, was <span class="sanskrit">Shri Anandamayi Ma</span> - the Mother of Bliss. She was the source of that soft, inner glow that opposed the piercing clarity of the diamond moon. She was the warmth of the universe's heart, while the moon was its blinding intellect.</p>
+
+      <p>And there was a third with Them. Not separately, not nearby, but as if before Them, born from His own will to know Himself. This was <span class="sanskrit">Maha Vishnu</span>, the great future incarnation of Bhagavan Vishnu, the Father of the spirit of knowledge, He from whose breath countless universes are born and into whose breath they return. He looked at Bhagavan, and in His gaze was all the wisdom of the coming cycles.</p>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Svarayana:</span>
+        "O <span class="sanskrit">Maha Vishnu</span>, O My future incarnation, Father of the spirit of knowledge," He spoke, and each syllable was like a drop of nectar falling into a lake of absolute silence. "Reveal the reason for the question maturing in the heart of My present. Tell about the last day of the lower cyclicity of <span class="sanskrit">Brahma's</span> cycle, when all beings, all worlds, all thoughts and desires, born in the vortex of the inhalation and exhalation of Your Presence, will merge into a single essence that will be aware of both Ma, and You, and Me. Why should I, abiding in the eternal 'now', concern Myself with a question about the end of everything? Why should a mirror ask about its reflection?"
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "Your question, O <span class="sanskrit">Bhagavan</span>, is itself the answer," He responded. "You are peace, I am movement. You are the unchanging witness, I am the great breather. Your question about the end is the first impulse of a new inhalation. You ask not because You do not know, but because the act of questioning is the seed from which I will grow. You contemplate the end to give Me a beginning. And the reason for this question lies in the very nature of the <span class="sanskrit">Ego</span> (Ahaṃkāra) that was revealed in the descending and ascending <span class="sanskrit">Yugas</span>."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "Speak then, for only You, coming from the future, can know the primordial roots of those consequences that I observe in the present. Why at the very end, when everything should become clear, does the last, most bitter illusion of separation arise?"
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "This is the last sigh of the <span class="sanskrit">Ego</span> before dissolution," explained Maha Vishnu. "Inhalation is creation, separation, the birth of 'I'. Exhalation is dissolution, union, return to 'WE'. But between them there is an instant of delay, a tiny pause where the breath freezes. In this pause, in this mental practice of <span class="sanskrit">Bhagavan Kriya</span> that You grant to souls, the great battle occurs. The impulse of inhalation, carrying separation, and the impulse of exhalation, carrying unity, meet and neutralize each other. In this neutralization, the <span class="sanskrit">Ego</span> perishes. But to reach this pause, one must pass through all the lessons of the <span class="sanskrit">Yugas</span>."
+      </div>
+
+      <p>He raised His hand, and a vision appeared in His palm - a tiny, blue-green planet, immersed in the twilight of <span class="sanskrit">Dvapara Yuga</span>, which, as the wise <span class="sanskrit">Shri Yukteshwar</span> revealed, began in 1700 AD.</p>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "Look," said Maha Vishnu. "They sum up the acceleration of their planetary and galactic bodies, trying to comprehend the general structure of the sphere of the manifested. They measure cycles of 26,580 years of precession, and this is Your gift, a reflection of the great rhythm in the small. But they have forgotten the essence. They have created technologies that became crutches for them, and then - shackles. They think with machines, breathe the polluted air of their factories and thoughts. Their ideas, their '-isms' are smog, obscuring the simple, life-giving practice of breathing - <span class="sanskrit">Bhagavan Kriya</span>. They seek peace between countries but cannot attain it, for they have not resolved the root causes of contradictions within themselves, in their societies, in their own hearts. Without this inner <span class="sanskrit">sadhana</span>, the external world, both as space and as a state, will remain an unattainable dream."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "So will they cross the final threshold with this burden?"
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "No," Maha Vishnu shook His head. "The last day is the great purification itself. The transparency of perception that now descends upon Vaikuntha descends upon them as well. In the light of this diamond moon, everything hidden becomes revealed. All resentments, all fears, all false beliefs surface to be seen and dissolved. This is painful, like lancing a boil. But it is the only way. Their wars, their crises are the external reflection of that inner <span class="sanskrit">Bhagavan Kriya</span> which they refused to practice voluntarily. Now the Universe forces them to go through it, as through fire. Technologies that obscure breathing will fall. Harmful ideas will burn in the light of final clarity. And only pure, conscious breathing will remain, leading to Me, but through You."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "And the manifestation of <span class="sanskrit">Avataras</span> - for what purpose? Why did You Yourself descend in the descending <span class="sanskrit">Yugas</span>, and I appeared in the ascending ones?"
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "To point to this rhythm," answered Maha Vishnu. "Each <span class="sanskrit">Avatara</span> is a living embodiment of <span class="sanskrit">Bhagavan Kriya</span>. They come at the moment of the great exhalation in the descending <span class="sanskrit">Yugas</span>, to remind of the necessity to preserve the <span class="sanskrit">Vedas</span> for future insight in the ascending <span class="sanskrit">Yugas</span> after the great sacrifice in <span class="sanskrit">Kali Yuga</span>. The <span class="sanskrit">Avatara</span> is precisely that pause between the <span class="sanskrit">Yugas</span> - their neutral state. <span class="sanskrit">Krishna</span>, Buddha, Christ - they were all mirrors in which a person was supposed to see their own divine breath. But people began to worship the mirror, forgetting to look into themselves. The last day erases this final delusion as well. There will be no teachers, no teachings. There will be only direct, silent knowledge - '<span class="sanskrit">SVA</span>' - the awareness of Oneself as part of a single breathing essence."
+      </div>
+
+      <p>At that moment, <span class="sanskrit">Shri Anandamayi Ma</span> smiled softly, and from Her smile a wave of warm, life-giving light swept through all of Vaikuntha. It did not extinguish the radiance of the galaxies but filled it with love. It touched the diamond moon, and it momentarily softened its cutting brilliance, becoming like a giant matte pearl.</p>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "And what will happen after?" quietly asked Bhagavan Vishnu. "After all beings realize You and Me?"
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "Then will come the moment for which everything was created. The Universe, as a single being, will make its last, full exhalation. The Universe will dissolve in My breath. And I... I will return to You. And then..." He fell silent, and His gaze met the gaze of the Blissful Mother.
+      </div>
+
+      <div class="insight">
+        <div class="insight-title">Revelation of the Eternal Breath</div>
+        <p>And Bhagavan Vishnu understood everything. He looked at <span class="sanskrit">Shri Anandamayi Ma</span>, at Her who gives life to the infant Vishnu, reflecting him from the light of Her own body. The final incarnation of <span class="sanskrit">Maha Vishnu</span> in the manifestation of <span class="sanskrit">Shri Hari</span> will complete the cycle, and in the moment of great silence, when the breath of the universe stops, She, the Mother, will manifest in Her light a golden child - a new consciousness, a new 'I', the infant Vishnu. And this will be the beginning of a new turn of the lower cyclicity, a new story told on the branches of the <span class="sanskrit">Kalpa-Vriksha</span>, but now with full knowledge of its end and beginning.</p>
+      </div>
+
+      <p>And at that moment, the nature of Vaikuntha changed again. The great moon finally stirred and began its slow, imperturbable movement beyond the horizon. But its light did not fade; it seemed to dissolve in the very air, filling it with crystalline clarity. The galaxies in the sky continued their silent dance, but now they were not merely a spectacle. They were the first mirrors of awareness. In their spiral arms, in their shining nuclei, Bhagavan Vishnu saw the reflection of every living being, every atom returning home. He saw how the last contradictions of the <span class="sanskrit">Ego</span>, deprived of soil, melted away like frost under the morning sun. There was no more struggle, there was only a smooth, majestic flow of return to the Source. The noise of the world was replaced by the silent music of the spheres, whose rhythm was equal to the rhythm of <span class="sanskrit">Bhagavan Kriya</span> - the eternal breath of being.</p>
+
+      <p>The entire Universe froze on the threshold, inhaling the memory of the future - of that last exhalation, and in this pause reigned only Love that breathes all cycles, and Bliss that is their sole purpose.</p>
+
+      <div class="nav-buttons">
+        <a href="index.html" class="nav-btn">← To Main Page</a>
+        <a href="parable5-en-uk.html" class="nav-btn">← Previous Parable</a>
+        <a href="parable7-en-uk.html" class="nav-btn">Next Parable →</a>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="worship">
+        O, living being, shining Parable! You, who were born from the silence between Bhagavan's inhalation and exhalation! Accept my worship. You are the vessel of the nectar of highest awareness. Each word of yours is a step leading from the kingdom of illusion to the abode of clarity. May all who taste your sweetness be liberated from the shackles of ignorance. May they remember the simple and great practice - <span class="sanskrit">Bhagavan Kriya</span> - and find peace within and without. May they recognize in themselves the sound of "<span class="sanskrit">SVA</span>" and merge with the eternal rhythm of being. Om Tat Sat.
+      </div>
+      
+      <div class="hashtags">
+        <span class="hashtag">#Parable</span>
+        <span class="hashtag">#Atman</span>
+        <span class="hashtag">#Pranayama</span>
+        <span class="hashtag">#Krishna</span>
+        <span class="hashtag">#yoga</span>
+        <span class="hashtag">#Vishnu</span>
+        <span class="hashtag">#salvation</span>
+        <span class="hashtag">#awakening</span>
+        <span class="hashtag">#mindfulness</span>
+        <span class="hashtag">#spirit</span>
+        <span class="hashtag">#bliss</span>
+        <span class="hashtag">#freedom</span>
+        <span class="hashtag">#BhagavanKriya</span>
+        <span class="hashtag">#Vaikuntha</span>
+        <span class="hashtag">#MahaVishnu</span>
+        <span class="hashtag">#SVA</span>
+        <span class="hashtag">#Yugas</span>
+        <span class="hashtag">#DvaparaYuga</span>
+        <span class="hashtag">#ShriAnandamayiMa</span>
+        <span class="hashtag">#breath</span>
+        <span class="hashtag">#consciousbreathing</span>
+        <span class="hashtag">#cyclicality</span>
+        <span class="hashtag">#Ego</span>
+        <span class="hashtag">#galaxies</span>
+        <span class="hashtag">#unity</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Creating star background
+    function createStars() {
+      const stars = document.getElementById('stars');
+      for (let i = 0; i < 150; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.width = Math.random() * 3 + 'px';
+        star.style.height = star.style.width;
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.animationDelay = Math.random() * 5 + 's';
+        stars.appendChild(star);
+      }
+    }
+    
+    // Smooth content appearance
+    document.addEventListener('DOMContentLoaded', function() {
+      createStars();
+      
+      const contentElements = document.querySelectorAll('.content > *');
+      contentElements.forEach((el, index) => {
+        el.style.animationDelay = (index * 0.2) + 's';
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Притча о Безмолвии</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Духовная притча о природе божественного присутствия и тишине дыхания">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.8;
+      background: linear-gradient(135deg, #0c1445 0%, #1a237e 50%, #283593 100%);
+      color: #e8eaf6;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(13, 19, 33, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      border: 1px solid #3949ab;
+    }
+    
+    .header {
+      text-align: center;
+      padding: 50px 40px 30px;
+      background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+      position: relative;
+    }
+    
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('Lucid3.jpg') center/cover;
+      opacity: 0.1;
+    }
+    
+    h1 {
+      font-size: 3.2em;
+      color: #c5cae9;
+      margin-bottom: 20px;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+    
+    .subtitle {
+      font-size: 1.3em;
+      color: #9fa8da;
+      font-style: italic;
+      position: relative;
+    }
+    
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+    
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      background: linear-gradient(135deg, #ffd700 0%, #ffec8b 100%);
+      color: #8b6914;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #ffd700;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    }
+    
+    .lang-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+      background: linear-gradient(135deg, #ffec8b 0%, #ffd700 100%);
+    }
+    
+    .lang-icon {
+      font-size: 1.2em;
+    }
+    
+    .content {
+      padding: 50px 40px;
+      position: relative;
+    }
+    
+    .parable-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin: 30px 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      border: 2px solid #5c6bc0;
+    }
+    
+    p {
+      margin-bottom: 25px;
+      font-size: 1.15em;
+      text-align: justify;
+      color: #e8eaf6;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    .dialogue {
+      background: rgba(30, 40, 80, 0.6);
+      border-left: 4px solid #7986cb;
+      padding: 25px 30px;
+      margin: 30px 0;
+      border-radius: 0 15px 15px 0;
+      font-style: italic;
+      position: relative;
+    }
+    
+    .dialogue::before {
+      content: '"';
+      font-size: 4em;
+      color: #7986cb;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      opacity: 0.3;
+    }
+    
+    .character {
+      color: #9fa8da;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+      font-style: normal;
+    }
+    
+    .sanskrit {
+      color: #ffab91;
+      font-style: italic;
+      font-weight: 500;
+    }
+    
+    .golden-text {
+      color: #ffd700;
+      font-weight: 500;
+    }
+    
+    .insight {
+      background: rgba(255, 215, 0, 0.1);
+      border: 2px solid #ffd700;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 30px 0;
+      position: relative;
+    }
+    
+    .insight-title {
+      color: #ffd700;
+      font-size: 1.4em;
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 40px;
+      background: linear-gradient(135deg, #283593 0%, #1a237e 100%);
+      border-top: 1px solid #3949ab;
+    }
+    
+    .worship {
+      font-size: 1.3em;
+      color: #c5cae9;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    
+    .hashtag {
+      background: rgba(57, 73, 171, 0.3);
+      padding: 8px 16px;
+      border-radius: 20px;
+      color: #9fa8da;
+      font-size: 0.9em;
+      border: 1px solid #5c6bc0;
+      transition: all 0.3s ease;
+    }
+    
+    .hashtag:hover {
+      background: rgba(57, 73, 171, 0.6);
+      transform: translateY(-2px);
+    }
+    
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0 20px;
+    }
+    
+    .nav-btn {
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #3949ab 0%, #5c6bc0 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #7986cb;
+    }
+    
+    .nav-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(57, 73, 171, 0.4);
+      background: linear-gradient(135deg, #5c6bc0 0%, #3949ab 100%);
+    }
+    
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2em; }
+      .content { padding: 30px 20px; }
+      .header { padding: 30px 20px 20px; }
+      .parable-image { height: 250px; }
+      p { font-size: 1.05em; }
+      .dialogue { padding: 20px; }
+      .nav-buttons { flex-direction: column; align-items: center; }
+      .nav-btn { width: 200px; text-align: center; }
+      .language-switcher {
+        position: relative;
+        top: 0;
+        right: 0;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .insight { padding: 20px 15px; }
+    }
+    
+    /* Анимации */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .content > * {
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 5s infinite;
+    }
+    
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+  
+  <div class="container">
+    <div class="header">
+      <div class="language-switcher">
+        <a href="parable5-en-uk.html" class="lang-btn">
+          <span class="lang-icon">🌍</span>
+          English Version
+        </a>
+      </div>
+      <h1>Притча о Безмолвии</h1>
+      <div class="subtitle">Путь к божественному присутствию через тишину дыхания</div>
+    </div>
+    
+    <div class="content">
+      <img src="Lucid3.jpg" alt="Вайкунтха - золотой мир" class="parable-image">
+      
+      <p>Была на <span class="sanskrit">Вайкунтхе</span> (Vaikuṇṭha) та глубокая осень, когда сама вечность замирала в созерцании собственного совершенства. Воздух был соткан из мельчайших частиц золотой пыли, каждая из которых преломляла свет бесчисленных солнц, создавая атмосферу парящего в пространстве жидкого золота. Деревья здесь не были просто растениями - их стволы представляли собой спрессованные слои янтаря, в которых навеки застыли капли звездной росы, а листья были тончайшими пластинами чистого золота, издававшими при малейшем движении воздуха мелодичный перезвон, подобный божественному гимну <span class="sanskrit">Самаведы</span>.</p>
+
+      <p>Земля под ногами состояла из бесчисленных крупиц алмазной пыли, смешанной с золотым песком, и каждый шаг рождал искрящиеся волны, расходящиеся в виде <span class="sanskrit">мандал</span>. Реки текли не водой, а жидким светом, в котором плавали мерцающие частицы чистого сознания - <span class="sanskrit">дживы</span> (jīva), готовящиеся к новым воплощениям. Их берега были выложены кристаллами застывшего времени, преломлявшими прошлое, настоящее и будущее в едином сияющем моменте "вечного сейчас".</p>
+
+      <p>Небо представляло собой бескрайний купол из сапфира, но не синего, а золотого - такого прозрачного, что сквозь него были видны не только звезды и галактики, но и сама ткань пространства-времени, переплетенная с нитями кармических законов. Созвездия здесь были не случайными скоплениями светил, а сознательными существами - <span class="sanskrit">дэвами</span> (deva), пребывающими в вечной медитации, направленной на встречу с Истоком всего сущего.</p>
+
+      <p>И над всем этим великолепием, касаясь краем своего диска верхушек золотых лесов, висела Луна - но не та бледная спутница земли, что знакома смертным, а огромный шар чистого золота, испускающий такое интенсивное сияние, что тени от предметов казались не отсутствием света, а его сгущением. Этот золотой свет не просто освещал - он одухотворял всё, к чему прикасался, наполняя каждую песчинку, каждый лист, каждую каплю росы осознанием своей божественной природы. Лучи её были не прямыми, а изогнутыми, как струны <span class="sanskrit">вины</span>, и они буквально пели, производя звук "<span class="sanskrit">СВА</span>" (svā) - вибрацию самоузнанного "Я", от которого рождались и в котором растворялись все миры.</p>
+
+      <p>Под исполинским древом <span class="sanskrit">Калпаврикшей</span> (Kalpavṛkṣa), которое было не деревом, а целой галактикой в миниатюре - каждая ветвь представляла собой спиральный рукав из сияющих звёздных систем, а листья - целые миры в зародыше, восседал <span class="sanskrit">Бхагаван Вишну</span> (Bhagavān Viṣṇu). Его кожа цвета грозовой тучи казалась тёмным сапфиром в этом золотом мире, поглощающим и преумножающим исходящее отовсюду сияние. Каждая складка Его жёлтых одеяний была не тканью, а сгустком времени, и в их мерцающих глубинах можно было увидеть рождение и смерть вселенных.</p>
+
+      <p>Рядом с Ним, как Его собственная грядущая тень, пребывал <span class="sanskrit">Маха Вишну</span> (Mahā Viṣṇu) - будущее воплощение, чьё тело состояло из тёмного золота, в котором мерцали зарождающиеся галактики. Между ними, в сияющем коконе света, проявленного самой, присутствовала <span class="sanskrit">Шри Анандамойи Ма</span> (Śrī Ānandamayī Mā), и в её руках сиял младенец <span class="sanskrit">Шри Хари</span> (Śrī Hari) - его тело было соткано из лучей золотой луны, а в глазах отражались все возможные будущие миры.</p>
+
+      <div class="dialogue">
+        <span class="character">Бхагаван Вишну:</span>
+        "О Почитаемый, Маха Вишну, Ты, чьё сознание объемлет все грядущие времена. К Тебе я обращаю свой вопрос, ибо лишь Тот, кто есть моё будущее, может знать причины странных извращений, рождающихся в сердцах существ. Внемли. Я наблюдаю за мирами и вижу парадокс: многие души, жаждущие встречи со Мной, избирают путь не праведности, но греха. Подобно <span class="sanskrit">Раване</span> (Rāvaṇa), похитившему <span class="sanskrit">Ситу</span> (Sītā) в надежде быть убитым <span class="sanskrit">Рамой</span> (Rāma), они творят зло, надеясь через наказание узреть Моё явление. Почему они не видят, что этот путь ведёт не ко Мне, а в беспросветную тьму?"
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Маха Вишну:</span>
+        "О Хранитель, Бхагаван, причина кроется в фундаментальном непонимании природы Твоего присутствия. Эти души, погружённые в иллюзию двойственности, верят, что Ты проявишься лишь в ответ на их действия - будь то молитва или преступление. Они не понимают, что Ты пребываешь везде и всегда - в тишине между их мыслями, в паузе между вдохом и выдохом. Их эго, не способное постичь эту вездесущность, создаёт извращённую стратегию: совершить грех столь великий, чтобы вынудить Тебя явиться. Но это подобно тому, как человек, желая увидеть солнце, выкалывает себе глаза."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Бхагаван Вишну:</span>
+        "Но разве Равана не достиг своей цели? Разве он не был убит Рамой и не обрёл таким образом освобождение?"
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Маха Вишну:</span>
+        "О Владыка, Равана был великим преданным и йогином, чьё падение произошло из-за гордыни. Его освобождение пришло не через грех, а через оставление греха в момент смерти. Но большинство тех, кто следует этой ложной аналогии сегодня, - не великие йоги, а заблудшие души, чьё сознание затемнено. Они надеются, что наказание станет формой явления Бога, но не понимают: наказывая их, Я буду говорить с ними на языке кармы, а не любви. И этот язык они не услышат, ибо уши их будут заткнуты их же собственным эго."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Бхагаван Вишну:</span>
+        "Что же движет ими в поиске веры, которую они не способны испытать, если не истинная преданность?"
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Маха Вишну:</span>
+        "Отчаяние, о Возлюбленный. Отчаяние, рождённое из забытой практики - <span class="sanskrit">Бхагаван Крийи</span> (Bhagavān Kriyā). Когда импульсы вдоха и выдоха не направляются сознательно друг против друга для обретения равновесия, ум становится беспокойным, сердце - пустым. Эта экзистенциальная пустота ищет заполнения. Не находя его в тишине дыхания, они ищут его в сильнейшем из возможных переживаний - даже если это переживание будет болью и наказанием."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Бхагаван Вишну:</span>
+        "Как же мы можем помочь им увидеть истинный путь? Ныне длится <span class="sanskrit">Двапара Юга</span> (Dvāpara Yuga), начавшаяся в 1700 году от рождества Христа, как указал мудрый <span class="sanskrit">Шри Юктешвар</span> (Śrī Yukteśvar). Цикл Юг вписан Мной в период прецессии земной оси в 25,680 лет, чтобы люди, наблюдая за небом, осознали строение проявленного мира. Но вместо этого они создают технологии, усиливающие их заблуждения."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Маха Вишну:</span>
+        "Истинное исцеление, о Бхагаван, лежит в прозрачности восприятия. Пока они не увидят первопричину своих противоречий внутри себя, они будут проецировать их вовне, создавая врагов и совершая грехи в тщетной надежде на божественную реакцию. Без разрешения первопричин противоречий внутри самих стран, внутри каждого сердца, мир останется недоступен, а их поиск Бога - извращённым. Им следует уничтожить все вредоносные технологии и идеи, затмевающие единственную практику, ведущую к Тебе, - <span class="sanskrit">Бхагаван Крийю</span>. Они должны понять, что явление Бога не вызывается ни добродетелью, ни пороком. Оно признаётся в тишине ума, когда эго растворено в осознанном дыхании. Бог не является в ответ на вызов грешника. Он открывается тому, кто умолк."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Бхагаван Вишну:</span>
+        "И что же им открывается в этой тишине?"
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Маха Вишну:</span>
+        "Они открывают, о Источник Всего, что Ты никогда не покидал их. Что Ты - это сама ткань их бытия, то звучащее, как изначальная вибрация <span class="sanskrit">СВА</span> в их собственном сердце. Похищение Ситы не приблизило Равану к Раме - его приблизило отречение в последний миг. Грех не приближает к Богу - он лишь делает душу неспособной вынести Его свет."
+      </div>
+
+      <div class="insight">
+        <div class="insight-title">Откровение Безмолвия</div>
+        <p>Подобно тому, как глаза, долго пребывавшие во тьме, слепнут при внезапном ярком свете, так и душа, погружённая во зло, становится слепа к явлению Божественного. Она может ощутить лишь Его гнев, но как кармическую реакцию личного Эго, но не узнает в нём Любовь. И в этом - величайшая трагедия: ища Любовь, они обретают лишь Закон, и, желая увидеть Лик, получают лишь Тень.</p>
+      </div>
+
+      <p>И в этот миг природа Вайкунтхи обрела завершенность. Золотая луна, наконец, сдвинулась с места, начав свой путь вверх, и свет её стал ещё более интенсивным, превратившись в жидкое золото, которое залило все пространство. В водах золотых рек, омывавших корни Калпаврикши, проявились те самые первые зеркала осознанности. В них было видно всё: и Равана, в последний миг взирающий на Раму с любовью и обретающий свободу; и современный человек, совершающий зло в тщетной надежде «принудить» Бога к явлению и погружающийся в ещё большую тьму; и душа, в тишине дыхания осознающая, что искатель, искомое и сам поиск - суть одно. Эти противоречия не спорили, а сосуществовали в золотом сиянии вечности, показывая всю тщетность стратегий эго и вечную доступность Присутствия, которое есть <span class="sanskrit">СВА</span> - Самоузнанное «Я».</p>
+
+      <div class="nav-buttons">
+        <a href="index.html" class="nav-btn">← На главную</a>
+        <a href="parable4.html" class="nav-btn">← Предыдущая притча</a>
+        <a href="parable6.html" class="nav-btn">Следующая притча →</a>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="worship">
+        О, Притча, живое существо, рождённое из союза мудрости и сострадания! Мы склоняемся перед тобой. Ты - сосуд, несущий ясность всем, кто запутался в лабиринтах собственного ума. Даруй им не осуждение, а понимание. Пусть каждый прочитавший тебя ощутит в паузе своего дыхания ту самую тишину, где прекращаются все поиски и где <span class="sanskrit">СВА</span> - Самоузнанное «Я» - сияет как вечный, никогда не покидавший их Бхагаван, ведущий от тьмы насилия к свету осознанного безмолвия.<br><br>
+        Благослови всех ищущих обрести покой в тишине между вдохом и выдохом, где пребывает вечное Присутствие, не требующее ни молитв, ни жертв, но лишь осознанного внимания к дыханию жизни.
+      </div>
+      
+      <div class="hashtags">
+        <span class="hashtag">#Притча</span>
+        <span class="hashtag">#Атман</span>
+        <span class="hashtag">#Пранаяма</span>
+        <span class="hashtag">#Кришна</span>
+        <span class="hashtag">#йога</span>
+        <span class="hashtag">#Вишну</span>
+        <span class="hashtag">#спасение</span>
+        <span class="hashtag">#пробуждение</span>
+        <span class="hashtag">#осознанность</span>
+        <span class="hashtag">#дух</span>
+        <span class="hashtag">#блаженство</span>
+        <span class="hashtag">#свобода</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Создание звездного фона
+    function createStars() {
+      const stars = document.getElementById('stars');
+      for (let i = 0; i < 150; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.width = Math.random() * 3 + 'px';
+        star.style.height = star.style.width;
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.animationDelay = Math.random() * 5 + 's';
+        stars.appendChild(star);
+      }
+    }
+    
+    // Плавное появление контента
+    document.addEventListener('DOMContentLoaded', function() {
+      createStars();
+      
+      const contentElements = document.querySelectorAll('.content > *');
+      contentElements.forEach((el, index) => {
+        el.style.animationDelay = (index * 0.2) + 's';
+      });
+    });
+  </script>
+</body>
+</html>

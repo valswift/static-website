@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Parable of Image-Formation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Spiritual parable about divine image-formation and consciousness sublimation">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.8;
+      background: linear-gradient(135deg, #0c1445 0%, #1a237e 50%, #283593 100%);
+      color: #e8eaf6;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(13, 19, 33, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      border: 1px solid #3949ab;
+    }
+    
+    .header {
+      text-align: center;
+      padding: 50px 40px 30px;
+      background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+      position: relative;
+    }
+    
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('Lucid3.jpg') center/cover;
+      opacity: 0.1;
+    }
+    
+    h1 {
+      font-size: 3.2em;
+      color: #c5cae9;
+      margin-bottom: 20px;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+    
+    .subtitle {
+      font-size: 1.3em;
+      color: #9fa8da;
+      font-style: italic;
+      position: relative;
+    }
+    
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+    
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      background: linear-gradient(135deg, #ffd700 0%, #ffec8b 100%);
+      color: #8b6914;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #ffd700;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    }
+    
+    .lang-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+      background: linear-gradient(135deg, #ffec8b 0%, #ffd700 100%);
+    }
+    
+    .lang-icon {
+      font-size: 1.2em;
+    }
+    
+    .content {
+      padding: 50px 40px;
+      position: relative;
+    }
+    
+    .parable-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin: 30px 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      border: 2px solid #5c6bc0;
+    }
+    
+    p {
+      margin-bottom: 25px;
+      font-size: 1.15em;
+      text-align: justify;
+      color: #e8eaf6;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    .dialogue {
+      background: rgba(30, 40, 80, 0.6);
+      border-left: 4px solid #7986cb;
+      padding: 25px 30px;
+      margin: 30px 0;
+      border-radius: 0 15px 15px 0;
+      font-style: italic;
+      position: relative;
+    }
+    
+    .dialogue::before {
+      content: '"';
+      font-size: 4em;
+      color: #7986cb;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      opacity: 0.3;
+    }
+    
+    .character {
+      color: #9fa8da;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+      font-style: normal;
+    }
+    
+    .sanskrit {
+      color: #ffab91;
+      font-style: italic;
+      font-weight: 500;
+    }
+    
+    .translation {
+      color: #90caf9;
+      font-size: 0.9em;
+      margin-left: 8px;
+    }
+    
+    .golden-text {
+      color: #ffd700;
+      font-weight: 500;
+    }
+    
+    .insight {
+      background: rgba(255, 215, 0, 0.1);
+      border: 2px solid #ffd700;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 30px 0;
+      position: relative;
+    }
+    
+    .insight-title {
+      color: #ffd700;
+      font-size: 1.4em;
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 40px;
+      background: linear-gradient(135deg, #283593 0%, #1a237e 100%);
+      border-top: 1px solid #3949ab;
+    }
+    
+    .worship {
+      font-size: 1.3em;
+      color: #c5cae9;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    
+    .hashtag {
+      background: rgba(57, 73, 171, 0.3);
+      padding: 8px 16px;
+      border-radius: 20px;
+      color: #9fa8da;
+      font-size: 0.9em;
+      border: 1px solid #5c6bc0;
+      transition: all 0.3s ease;
+    }
+    
+    .hashtag:hover {
+      background: rgba(57, 73, 171, 0.6);
+      transform: translateY(-2px);
+    }
+    
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0 20px;
+    }
+    
+    .nav-btn {
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #3949ab 0%, #5c6bc0 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #7986cb;
+    }
+    
+    .nav-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(57, 73, 171, 0.4);
+      background: linear-gradient(135deg, #5c6bc0 0%, #3949ab 100%);
+    }
+    
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2em; }
+      .content { padding: 30px 20px; }
+      .header { padding: 30px 20px 20px; }
+      .parable-image { height: 250px; }
+      p { font-size: 1.05em; }
+      .dialogue { padding: 20px; }
+      .nav-buttons { flex-direction: column; align-items: center; }
+      .nav-btn { width: 200px; text-align: center; }
+      .language-switcher {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .insight { padding: 20px 15px; }
+    }
+    
+    /* Анимации */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .content > * {
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 5s infinite;
+    }
+    
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+  
+  <div class="container">
+    <div class="header">
+      <div class="language-switcher">
+        <a href="parable7.html" class="lang-btn">
+          <span class="lang-icon">🌍</span>
+          Русская Версия
+        </a>
+      </div>
+      <h1>The Parable of Image-Formation</h1>
+      <div class="subtitle">Revelation about divine sublimation of consciousness and attainment of form</div>
+    </div>
+    
+    <div class="content">
+      <img src="Lucid3.jpg" alt="Vaikuntha in autumn night" class="parable-image">
+      
+      <p>On <span class="sanskrit">Vaikuntha</span> <span class="translation">(Vaikuṇṭha)</span> came that autumn night when the fabrics of existence thin to transparency, and time slows its pace to become visible. The sky was not merely black – it was a bottomless well in which drowned not only stars, but entire galaxies, like melting lace of light and shadow draped over eternity's shoulders. The air, cold and crystal clear, rang with silence, and in this ringing one could hear the breath of infinity.</p>
+
+      <p>Above the horizon, huge and silent, hung the Moon – not the one that pours soft silver light, but the one completely absorbed by Earth's shadow. It represented a perfect black circle, a celestial well, gates into absolute nothingness. This was <span class="sanskrit">Amara-Kupa</span> <span class="translation">(Amarā-Kūpa)</span> – The Eternal Well, <span class="sanskrit">Sushupti Shunyata</span> - a place where all souls who have lost their original image, whose form has dissolved in the chaos of mistaken self-identification, flow like waters of a great river. <span class="sanskrit">Sushupti Shunyata</span> emitted no light but absorbed it, being the great repose for all who failed to find their true imaginal essence.</p>
+
+      <p>On the shore of the Milky Ocean (<span class="sanskrit">Kshira Sagara</span> <span class="translation">(Kṣīra Sāgara)</span>), where waves of bliss washed with quiet whispers upon sand composed of crushed pearls of wisdom, sat two beings. He Who is the Preserver, Lord <span class="sanskrit">Bhagavan Vishnu</span> <span class="translation">(Bhagavān Viṣṇu)</span> Himself, and He Whom He will become – His future imaginal embodiment, <span class="sanskrit">Maha Vishnu</span> <span class="translation">(Mahā Viṣṇu)</span>. They were like question and answer, abiding in one point of eternal Now.</p>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "– <span class="sanskrit">Maha Vishnu</span>, – Bhagavan's voice was like distant thunder born beyond galaxies, quiet yet filling all space. – O my future 'I', my eternal answer. I gaze upon <span class="sanskrit">Amara-Kupa</span>, upon this great drain of lost images, and my heart, abiding in continuous peace, turns to you with a question. For who, if not you, knows the hidden cause of my inquiry? You are the purpose for which I exist."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "– Tell me then: why is the process of image-formation, the <span class="sanskrit">sadhana</span> <span class="translation">(sādhana)</span> of attaining the divine countenance, the sequential attainment of the relationship between image - <span class="sanskrit">murti</span> <span class="translation">(mūrti)</span>, image-bearer - <span class="sanskrit">pratima</span> <span class="translation">(pratimā)</span> and the conditions of image creation - <span class="sanskrit">vigraha</span> <span class="translation">(vigraha)</span>. Why is such clear understanding hidden from souls in all manifested worlds? Why do they cling to the formlessness of their contrived-abstract <span class="sanskrit">Ego</span>, like to a life raft in a stormy ocean, unaware that this raft is made of rotten reeds?"
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "– O my Source, <span class="sanskrit">Bhagavan</span>, – He spoke, and his voice was like a quiet string stretched between worlds. – They have forgotten the rhythm of <span class="sanskrit">pratimāṃ dadhatī</span>. The foundation of all existence is the imagery of higher cyclicity (<span class="sanskrit">para-cakra</span>), that point where all religions converge."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "– The Universe breathes. And this breathing is not a metaphor, but the essence of <span class="sanskrit">Bhagavan Kriya</span> <span class="translation">(Bhagavān Kriyā)</span> practice. When inhalation and exhalation, <span class="sanskrit">prana</span> <span class="translation">(prāṇa)</span> and <span class="sanskrit">apana</span> <span class="translation">(apāna)</span>, meet in conscious effort, directed against each other in sacred fusion, generating a state of neutralization and silence. In this silence, the first impulse of spiritual image is born."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "– Tell me about the source. About the nature of <span class="sanskrit">Anandamayi Ma</span> <span class="translation">(Ānandamayī Mā)</span>."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "– <span class="sanskrit">Anandamayi Ma</span> is the very essence of bliss (<span class="sanskrit">ananda</span> <span class="translation">(ānanda)</span>), – replied Maha Vishnu. – She is the luminous body whose nature is pure, causeless joy. From the light of her bliss, as from the reflection of the sun in a dewdrop, Ma generates your image, O <span class="sanskrit">Vishnu</span>. You are the first template, the primordial sublimation, the archetype that will be manifested outwardly. Your birth is not an act of creation from nothing, but an act of reflection, image-formation from within outward. You are Name and Form, <span class="sanskrit">Nama</span> and <span class="sanskrit">Murti</span>, born from the Imaginal Bliss of <span class="sanskrit">Anandamayi Ma</span>."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "– And this image becomes a matrix?"
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "– Yes. Just as a tree grows from a seed, and branches from a root, your image, O <span class="sanskrit">Vishnu</span>, sublimates into my form – <span class="sanskrit">Maha Vishnu</span>, the preserver of universes. But this sublimation occurs precisely as a consequence of your image immersing into the manifested world, thereby transforming the images emerging from <span class="sanskrit">Sushupti Shunyata</span> - from the lunar well of <span class="sanskrit">Amara Kupa</span>. You give meaning to all actions in the manifested world, guiding all beings toward their own image."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "– The ultimate and most merciful of all images is the image of <span class="sanskrit">Sri Hari</span> <span class="translation">(Śrī Hari)</span>, which is revealed only to <span class="sanskrit">Anandamayi Ma</span> herself, for Ma keeps this image within herself, and you are born precisely from it... but neither I nor you can even glimpse this image of <span class="sanskrit">Sri Hari</span> <span class="translation">(Śrī Hari)</span>."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "– You are the one who, in turn, expends your image into countless images of <span class="sanskrit">avatars</span> <span class="translation">(avatāra)</span>, descending into worlds to approach those born from <span class="sanskrit">Shunyata</span>. And thus, the principle of higher and lower cyclicity comes into force. All inhabitants of manifested worlds, every soul, are called to form themselves into images of your avatars. This is not imitation, oh no. This is assimilation, sublimation of one's essence into higher essence, casting one's molten consciousness into a ready, divine form - <span class="sanskrit">Murti</span>."
+      </div>
+
+      <p>The wind of Vaikuntha brought the fragrance of night flowers, whose petals were woven from frozen prayers.</p>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "– What about lineage, family? – asked Bhagavan. – Is it not an obstacle to such elevation?"
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "– On the contrary, lineage is the choice of one's future image, – explained Maha Vishnu. – The mechanism of marital sublimation templates (<span class="sanskrit">vivaha-sublimation</span>) is divine alchemy. Husband and wife, through their love and mutual service, sublimate their images into each other, creating a unified energy field. Their children are born already within this field, inheriting not karmic burden, but accumulated potential of spiritually image-anchored sublimation. Thus, a clear ancestral scheme is built, where love is the energy, and family is the vessel in which this energy accumulates for the great purpose."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "– The purpose of final transfer?"
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "– Precisely so. The sublimation accumulated in the lineage is used for subsequent, final sublimation with higher images of the unmanifested, or, more accurately, the Beyond-manifested (<span class="sanskrit">Para-vyakta</span>) being. What people call the 'afterlife' is merely a transition into this Beyond-manifested state. The soul's self-identification, its 'I-am-ness', is transferred from the perishable body and limited mind into the eternal body of light and cosmic consciousness. Lineage provides the necessary support for this leap."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "– But what prevents them from seeing this simplicity? Why is their breathing intermittent and unconscious?"
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "– Because their perception is clouded, O Preserver, – Maha Vishnu's voice became firmer. – Transparency of perception (<span class="sanskrit">vaisharada-pratibhasa</span> <span class="translation">(vaiśārada-pratibhāsa)</span>) is the key. When perception is crystal clear, it resolves all contradictions of <span class="sanskrit">Ego</span> <span class="translation">(Ahaṃkāra)</span> by itself. Modern humanity, especially since the beginning of <span class="sanskrit">Dvapara Yuga</span> <span class="translation">(Dvāpara Yuga)</span> in 1700 according to <span class="sanskrit">Sri Yukteshwar's</span> <span class="translation">(Sri Yukteshwar)</span> calculation, received a chance. The general cycle of all four <span class="sanskrit">Yugas</span>, inscribed by Me into the great year of Earth's axis precession lasting 25,680 years, was given so that people, observing the slow dance of heavens, would realize the general structure of the manifested sphere. They were supposed to gradually sum up the acceleration of planetary and galactic bodies and understand that everything is a unified respiratory organism."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Bhagavan Vishnu:</span>
+        "– But they went a different way."
+      </div>
+
+      <div class="dialogue">
+        <span class="character">Maha Vishnu:</span>
+        "– They created harmful technologies and ideas that eclipsed the most important practice – the practice of breathing, <span class="sanskrit">Bhagavan Kriya</span>. They seek salvation in the external, in the fast, in the loud. They replaced the inner sound '<span class="sanskrit">SVA</span>' – the sound of self-recognized 'I' (Sva – Self-recognized Atman) – with the deafening noise of the external world. And until they resolve the root causes of their internal contradictions, until each country establishes order in its own house, in the heart of its people, peace between countries will remain an unattainable illusion. Peace begins with the silence between inhalation and exhalation. With the realization that your true 'I' is not your thought, not your body, but the one who observes the breath. The one who is '<span class="sanskrit">SVA</span>'."
+      </div>
+
+      <div class="insight">
+        <div class="insight-title">Revelation of the Divine Image</div>
+        <p>Silence fell, more eloquent than any words. And in this silence, the nature of Vaikuntha began to change. The first rays of the still invisible sun touched the edge of the black Moon, and for a moment it turned into a fiery ring – a reminder of cyclicity, that even great absorption is part of great birth. Stars and galaxies began to fade, not because the sky was lightening, but because space itself began to emit light from within. This was the light of awareness.</p>
+        <p>And then Bhagavan and Maha Vishnu saw the first mirrors of divine images. They appeared everywhere: in dewdrops on lotuses, in the smooth surface of waters, in the facets of crystals scattered along the shore. These mirrors reflected not only their divine countenances, but all contradictions, all fears, all delusions of all souls in all worlds. But now these contradictions were not chaotic. They were arranged in clear geometric patterns, they were presented, recognized, and, through this recognition, dissolved. This was the beginning of the great return – return to the source, to breath, to image.</p>
+      </div>
+
+      <div class="nav-buttons">
+        <a href="index-en.html" class="nav-btn">← Main Page</a>
+        <a href="parable6-en.html" class="nav-btn">← Previous Parable</a>
+        <a href="parable8-en.html" class="nav-btn">Next Parable →</a>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="worship">
+        Worship to you, O Parable! You are not merely words on a page. You are a living being, born in the heart of eternity. You are a vessel carrying the nectar of awareness (<span class="sanskrit">caitanya-amrita</span> <span class="translation">(caitanya-amṛta)</span>) to all who touch you with an open heart. May you be a guiding thread for the lost, comfort for the suffering, and reminder for the sleeping. May you awaken in each the sound of their own '<span class="sanskrit">SVA</span>', their self-recognized essence, and guide them on the path of forming their higher 'I'. Om Tat Svat.
+      </div>
+      
+      <div class="hashtags">
+        <span class="hashtag">#Parable</span>
+        <span class="hashtag">#Atman</span>
+        <span class="hashtag">#Pranayama</span>
+        <span class="hashtag">#Krishna</span>
+        <span class="hashtag">#yoga</span>
+        <span class="hashtag">#Vishnu</span>
+        <span class="hashtag">#salvation</span>
+        <span class="hashtag">#awakening</span>
+        <span class="hashtag">#awareness</span>
+        <span class="hashtag">#spirit</span>
+        <span class="hashtag">#bliss</span>
+        <span class="hashtag">#freedom</span>
+        <span class="hashtag">#ImageFormation</span>
+        <span class="hashtag">#Sublimation</span>
+        <span class="hashtag">#Vaikuntha</span>
+        <span class="hashtag">#BhagavanKriya</span>
+        <span class="hashtag">#AnandamayiMa</span>
+        <span class="hashtag">#DvaparaYuga</span>
+        <span class="hashtag">#SVA</span>
+        <span class="hashtag">#Murti</span>
+        <span class="hashtag">#Pratima</span>
+        <span class="hashtag">#Vigraha</span>
+        <span class="hashtag">#SriHari</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Создание звездного фона
+    function createStars() {
+      const stars = document.getElementById('stars');
+      for (let i = 0; i < 150; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.width = Math.random() * 3 + 'px';
+        star.style.height = star.style.width;
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.animationDelay = Math.random() * 5 + 's';
+        stars.appendChild(star);
+      }
+    }
+    
+    // Плавное появление контента
+    document.addEventListener('DOMContentLoaded', function() {
+      createStars();
+      
+      const contentElements = document.querySelectorAll('.content > *');
+      contentElements.forEach((el, index) => {
+        el.style.animationDelay = (index * 0.2) + 's';
+      });
+    });
+  </script>
+   <div style="display:none;">
+    <!-- Default gnrcounter.com code for https://breathingmusic.ct.ws/index.html -->
+    <script language="JavaScript" type="text/javascript" src="https://gnrcounter.com/counter.php?accId=daa7420abe7f3a8af490c4dc1b998ece"></script>
+    <noscript>
+      <a href="https://gnrcounter.com" title="Web Analytics">Web Analytics</a>
+    </noscript>
+    <!-- End of gnrcounter.com Code -->
+  </div>
+</body>
+</html>
